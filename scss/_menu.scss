@@ -1,0 +1,120 @@
+.menu-button{
+    position: absolute;
+    width: 50px;
+    height: 48px;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: rgba(#fff,0.7);
+    background-color: $secondary-color;
+    z-index: 4;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    @include easeOut;
+
+    .button-line{
+        width: 35px;
+        height: 5px;
+        margin: 7px 0px 0px 6px;
+        border-radius: 10px;
+        background: set-text-color(#000);
+        @include easeOut;
+    }
+
+    &.close{
+        background-color: $primary-color;
+        .button-line{
+            &:nth-child(1){
+                transform: rotate(45deg) translate(8px,9px)
+            }
+            &:nth-child(2){
+                opacity: 0;
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(7px,-9px)
+            }
+        }
+    }
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    &:hover{
+        color: black;
+    }
+
+    &-navigation{
+        margin: 0;
+        padding: 0;
+        background: darken($secondary-color,5);
+        list-style: none;
+        transform: translate3d(0,-100%,0);
+        @include easeOut;
+
+        &.show{
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    &-portrait{
+        background: rgba($primary-color,0.7);
+        transform: translate3d(0,100%,0);
+        @include easeOut;
+        &.show{
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    .portrait{
+        width: 272px;
+        height: 272px;
+        background: $portrait-image;
+        opacity: 100%;
+        border-radius: 50%;
+        border: solid 2px $secondary-color;
+    }
+
+    &.show{
+        visibility: visible;
+    }
+    &-portrait,&-navigation{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+    }
+
+    .navigation-item{
+        transform: translate3d(0,0,0);
+        
+
+        &.show{
+            transform: translate3d(0,0,0);
+        }
+        &.current-page>a{
+            color: yellow;
+            width: 100%;
+        }
+    }
+
+    .navigation-link{
+        display: inline-block;
+        position: relative;
+        color: set-text-color(#000);
+        width: 100%;
+        font-size: 35px;
+        text-transform: uppercase;
+        padding: 15px 0px 15px 0px;
+        font-weight: 300;
+        @include easeOut;
+        &:hover{
+            color: set-text-color(#FFF);
+        }
+    }
+}

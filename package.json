@@ -1,0 +1,17 @@
+{
+  "name": "example-1",
+  "version": "1.0.0",
+  "description": "first example",
+  "main": "index.js",
+  "homepage": "https://MiroRahkonen.github.io/Front-End-Project",
+  "scripts": {
+    "dev": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Miro Rahkonen",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^4.0.0",
+    "node-sass": "^7.0.3"
+  }
+}

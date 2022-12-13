@@ -1,0 +1,207 @@
+@import "config";
+@import "menu";
+* {
+    box-sizing: border-box;
+}
+
+main{
+    padding: 60px;
+    min-height: calc(100vh-60px);
+
+    .icons{
+        margin-top: 16px;
+
+        a{
+            padding: 6px;
+            &:hover{
+                color:$secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+    &#home{
+        overflow: hidden;
+        h1{
+            margin-top: 25vh;
+        }
+    }
+}
+
+body{
+    @include background();
+    background: $primary-color;
+    color: set-text-color(#000);
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.primary-text{
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.secondary-text{
+    color: $secondary-color;
+}
+
+h1,h2,h3{
+    margin: 0;
+    font-weight: 400;
+
+    &.primary-text{
+        font-size: 80px;
+    }
+
+    &.info-header{
+        margin-bottom: 32px;
+        padding: 6px 16px;
+        border-radius: 10px;
+        background: rgba(lighten($primary-color,2),0.5);
+    }
+}
+
+.center{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Info page
+
+.bio{
+    text-align: center;
+    h2{
+        color: $secondary-color;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    p{
+        text-align: justify;
+        text-justify: auto;
+    }
+}
+
+.bio-container{
+    display: grid;
+    grid-template-areas: 
+    'portrait-image bio'
+    'education-1 education-2';
+    grid-template-columns: repeat(2,1fr);
+    .portrait-image{
+        grid-area: portrait-image;
+        margin: auto;
+        border-radius: 50%;
+        border: solid 3px $secondary-color;
+    }
+    .bio{
+        grid-area: bio;
+        font-size: 26px;
+        margin-bottom: 50px;
+    }
+    .education-1{
+        margin: 10px 10px 10px 10px;
+        grid-area: education-1
+    }
+    .education-2{
+        grid-area: education-2;
+        margin: 10px 10px 10px 10px;
+    }
+    img{
+        max-width: 40vw;
+    }
+    .education{
+        border-radius: 5px;
+        padding: 10px;
+        background: lighten($primary-color,5);
+        border-bottom: $secondary-color 7px solid;
+    }
+}
+
+// Projects page
+.projects{
+    display: grid;
+    grid-gap: 20px;
+    img{
+        width: 100%;
+        border: 3px #fff solid;
+        &:hover{
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut;
+        }
+    }
+    grid-template-columns: repeat(2,2fr);
+}
+
+//Contact info page
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+    div{
+        font-size: 32px;
+        border: 3px #fff solid;
+        padding: 16px 28px;
+        margin: 10px 10px 10px 10px;
+        @include easeOut;
+        &:hover{
+            padding: 8px 15px;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            .secondary-text{
+                color: white;
+            }
+        }
+    }
+}
+
+// Button styles
+.button{
+    display: block;
+    padding: 10px 15px;
+    border: 0;
+    margin-bottom: 4px;
+    &:hover{
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+.button-light{
+    @extend .button;
+    background: lighten($primary-color, 50);
+    color: black;
+}
+
+.button-dark{
+    @extend .button;
+    background: darken($primary-color, 50);
+    color: white;
+}
+
+// Copyright footer
+#info-footer{
+    text-align: center;
+    font-size: 26px;
+    padding: 16px;
+    background: darken($primary-color,5);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+@import "mobile";
