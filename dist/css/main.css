@@ -160,7 +160,7 @@ h1, h2, h3 {
 .bio {
   text-align: center; }
   .bio h2 {
-    color: #a938ff;
+    color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
   .bio p {
     text-align: justify;
@@ -192,6 +192,9 @@ h1, h2, h3 {
     padding: 10px;
     background: #515151;
     border-bottom: #a938ff 7px solid; }
+  .bio-container p {
+    text-align: justify;
+    text-justify: auto; }
 
 .projects {
   display: grid;
