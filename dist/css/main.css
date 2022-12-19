@@ -161,13 +161,17 @@ h1, h2, h3 {
   background-image: url("../img/background.png");
   min-height: 100%;
   width: 100%; }
+  .image1 img {
+    opacity: 70%; }
 
 .image2 {
+  padding-top: 50vh;
   padding-bottom: 70vh;
   background-image: url("../img/lyseo.png");
   min-height: 800px; }
 
 .image3 {
+  padding-top: 50vh;
   padding-bottom: 70vh;
   background-image: url("../img/lut.png");
   min-height: 600px; }
@@ -180,7 +184,17 @@ h1, h2, h3 {
   padding: 0px 20px 20px; }
 
 .section-dark {
-  background-color: #444; }
+  background-color: rgba(68, 68, 68, 0.8); }
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 7px;
+  text-transform: uppercase; }
 
 .bio {
   text-align: center; }

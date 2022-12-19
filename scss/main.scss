@@ -99,9 +99,13 @@ h1,h2,h3{
     background-image: $background-image;
     min-height: 100%;
     width: 100%;
+    img{
+        opacity: 70%;
+    }
 }
 
 .image2{
+    padding-top: 50vh;
     padding-bottom: 70vh;
     background-image: $lyseo-image;
     min-height: 800px;
@@ -109,6 +113,7 @@ h1,h2,h3{
 
 
 .image3{
+    padding-top: 50vh;
     padding-bottom: 70vh;
     background-image: $lut-image;
     min-height: 600px;
@@ -124,7 +129,18 @@ h1,h2,h3{
 }
 
 .section-dark{
-    background-color: $primary-color;
+    background-color: rgba($primary-color,0.8);
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 7px;
+    text-transform: uppercase;
 }
 
 // Info page
