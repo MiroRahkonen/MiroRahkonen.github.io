@@ -163,17 +163,16 @@ h1, h2, h3 {
   width: 100%; }
 
 .image2 {
-  padding-bottom: 40vh;
+  padding-bottom: 70vh;
   background-image: url("../img/lyseo.png");
   min-height: 800px; }
 
 .image3 {
-  padding-bottom: 40vh;
+  padding-bottom: 70vh;
   background-image: url("../img/lut.png");
   min-height: 600px; }
 
 .image4 {
-  padding-bottom: 20vh;
   background-color: #444;
   text-align: center; }
 
