@@ -1,7 +1,9 @@
 $primary-color: #444;
 $secondary-color: #a938ff;
 $show-home-image: true;
-$home-image: url("../img/background.png");
+$background-image: url("../img/background.png");
+$lyseo-image: url("../img/lyseo.png");
+$lut-image: url("../img/lut.png");
 $portrait-image: url("../img/portrait.png");
 $portrait-small-image: url("../img/portrait_small.png"); 
 $background-opacity: 0.6;
@@ -22,7 +24,7 @@ $background-opacity: 0.6;
 @mixin background{
     @if $show-home-image{
         &#background-image{
-            background: $home-image;
+            background: $background-image;
             background-attachment: fixed;
             background-size: cover;
             .overlay{

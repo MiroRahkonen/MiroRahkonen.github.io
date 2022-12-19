@@ -111,18 +111,10 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   line-height: 1.5; }
-  body#background-image {
-    background: url("../img/background.png");
-    background-attachment: fixed;
-    background-size: cover; }
-    body#background-image .overlay {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(68, 68, 68, 0.6);
-      z-index: -1; }
+
+body, html {
+  height: 100%;
+  margin: 0; }
 
 a {
   color: #fff;
@@ -156,6 +148,40 @@ h1, h2, h3 {
   display: block;
   margin-left: auto;
   margin-right: auto; }
+
+.image1, .image2, .image3 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed; }
+
+.image1 {
+  padding-top: 45vh;
+  background-image: url("../img/background.png");
+  min-height: 100%;
+  width: 100%; }
+
+.image2 {
+  padding-bottom: 40vh;
+  background-image: url("../img/lyseo.png");
+  min-height: 800px; }
+
+.image3 {
+  padding-bottom: 40vh;
+  background-image: url("../img/lut.png");
+  min-height: 600px; }
+
+.image4 {
+  padding-bottom: 20vh;
+  background-color: #444;
+  text-align: center; }
+
+.section {
+  padding: 0px 20px 20px; }
+
+.section-dark {
+  background-color: #444; }
 
 .bio {
   text-align: center; }
